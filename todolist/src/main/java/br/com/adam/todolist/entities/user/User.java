@@ -1,4 +1,4 @@
-package br.com.adam.todolist.entities;
+package br.com.adam.todolist.entities.user;
 
 
 import jakarta.persistence.*;
@@ -20,7 +20,7 @@ import java.util.UUID;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
     private UUID uuid;
     @Column(unique = true)
     private String username;
